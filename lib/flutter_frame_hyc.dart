@@ -2,6 +2,9 @@ import 'package:flutter_frame_hyc/src/log/log.dart';
 
 /// 这里应该是先暴露一些文件
 export 'src/log/log.dart';
+export 'src/file/file.dart';
+export 'src/storage/storage.dart';
+export 'src/route/route.dart';
 
 ///
 /// todo 目前还是不提供自定义启动模块, 初始化就是全功能实现
