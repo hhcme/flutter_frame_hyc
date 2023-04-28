@@ -21,14 +21,14 @@ class LogOfHYC {
   }
 
   /// 调试模式下打印日志
-  void debugLog(Object message) {
+  void logDebug(Object message) {
     if (kDebugMode) {
       debugPrint('debug $_nowTime $_logName : $message');
     }
   }
 
   /// 任何时候都打印日志
-  void infoLog(Object message) {
+  void logInfo(Object message) {
     log('info $_nowTime $_logName : $message');
     if (kDebugMode) {
       print('info $_nowTime $_logName : $message');

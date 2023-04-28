@@ -18,7 +18,7 @@ class RoutesOfHYC {
   /// 判断能否跳转路由
   bool canPush() {
     if (_timer != null) {
-      routeLog.infoLog('处在路由保护中,本次路由操作丢弃');
+      routeLog.logInfo('处在路由保护中,本次路由操作丢弃');
       return false;
     }
     return true;
@@ -68,13 +68,13 @@ class RoutesOfHYC {
   /// 开启路由保护状态定时器
   void _runTimer() {
     if (_timer != null) {
-      routeLog.infoLog('当前已经处在路由保护中');
+      routeLog.logInfo('当前已经处在路由保护中');
       return;
     }
 
-    routeLog.infoLog('路由保护状态开始');
+    routeLog.logInfo('路由保护状态开始');
     _timer = Timer(const Duration(milliseconds: 500), () {
-      routeLog.infoLog('路由保护状态结束');
+      routeLog.logInfo('路由保护状态结束');
       _timer?.cancel();
       _timer = null;
     });

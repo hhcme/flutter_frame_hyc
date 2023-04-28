@@ -1,6 +1,4 @@
-import 'dart:developer';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// 如果在这里做路由栈的保存,那就只能放在全局变量里面才能使用了
@@ -15,7 +13,7 @@ class MyNavigatorObserver extends NavigatorObserver {
     //添加了一个新路由到历史记录中
     //弹窗的路由也会触发
     debugPrint('didPush: ${route.settings.name}');
-    debugPrint('添加了一个新路由到历史记录中1');
+    debugPrint('添加了一个新路由到历史记录中');
   }
 
   @override
@@ -50,7 +48,8 @@ class MyNavigatorObserver extends NavigatorObserver {
   @override
   void didStartUserGesture(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didRemove(route, previousRoute);
-    history.remove(route);
+    // 这里还不知道功能, 对于外部来说还是暂时使用 get本身的路由查询吧
+    // history.remove(route);
     //当用户开始操作新的路由时被调用，例如手势拖动等，触发了路由转换
     debugPrint('didStartUserGesture: ${route.settings.name}');
     debugPrint('当用户开始操作新的路由时被调用，例如手势拖动等，触发了路由转换');

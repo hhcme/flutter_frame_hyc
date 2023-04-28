@@ -7,7 +7,7 @@ void main() {
   testWidgets('log', (WidgetTester tester) async {
     // 日志实例
     final log = LogOfHYC(logName: 'asd');
-    log.debugLog('123123');
-    log.infoLog('123123');
+    log.logDebug('123123');
+    log.logInfo('123123');
   });
 }
