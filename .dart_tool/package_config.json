@@ -3,229 +3,259 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/async-2.10.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/async-2.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/boolean_selector-2.1.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/characters-1.2.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/characters-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "clock",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/clock-1.1.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/collection-1.17.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/collection-1.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/fake_async-1.3.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/ffi-2.0.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/ffi-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "file",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/file-6.1.4",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/file-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/hahaha/development/flutter/flutter/packages/flutter",
+      "rootUri": "file:///D:/soft/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/flutter_lints-2.0.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/flutter_lints-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/hahaha/development/flutter/flutter/packages/flutter_test",
+      "rootUri": "file:///D:/soft/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "get",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/get-4.6.5",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/get-4.6.6",
       "packageUri": "lib/",
-      "languageVersion": "2.15"
+      "languageVersion": "2.12"
     },
     {
       "name": "get_storage",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/get_storage-2.1.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/get_storage-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
     {
       "name": "js",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/js-0.6.5",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/js-0.6.5",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/lints-2.0.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/lints-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/matcher-0.12.13",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/matcher-0.12.13",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/material_color_utilities-0.2.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/material_color_utilities-0.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/meta-1.8.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/meta-1.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path-1.8.2",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path-1.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider-2.0.14",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider-2.0.14",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider_android-2.0.25",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider_android-2.0.26",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider_foundation-2.2.2",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider_foundation-2.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider_linux-2.1.10",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider_linux-2.1.10",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider_platform_interface-2.0.6",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider_platform_interface-2.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/path_provider_windows-2.1.6",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/path_provider_windows-2.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
+      "name": "permission_handler",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/permission_handler-10.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_android",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/permission_handler_android-10.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_apple",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/permission_handler_apple-9.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/permission_handler_platform_interface-3.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "permission_handler_windows",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/permission_handler_windows-0.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "platform",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/platform-3.1.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/platform-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-2.1.4",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/plugin_platform_interface-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "process",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/process-4.2.4",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/hahaha/development/flutter/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///D:/soft/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/source_span-1.9.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/source_span-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/stack_trace-1.11.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/stack_trace-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/stream_channel-2.1.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/stream_channel-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/string_scanner-1.2.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/term_glyph-1.2.1",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/test_api-0.4.16",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/test_api-0.4.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.1.4",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/win32-4.1.3",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/win32-4.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/hahaha/.pub-cache/hosted/pub.flutter-io.cn/xdg_directories-1.0.0",
+      "rootUri": "file:///C:/Users/hhc.AD/AppData/Local/Pub/Cache/hosted/http%2558%2547%2547pub.lan.wiqun.com/xdg_directories-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -236,7 +266,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-26T15:40:06.586125Z",
+  "generated": "2023-04-28T00:14:21.779215Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
