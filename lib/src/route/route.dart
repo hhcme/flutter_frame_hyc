@@ -52,6 +52,7 @@ class RoutesOfHYC {
   }
   /// 一直退出路由, 直到被打断
   void until<T>(RoutePredicate predicate) {
+    // todo 这里需要做一个默认值就是退到最后一层的 / 路由
     Get.until(predicate);
   }
 
