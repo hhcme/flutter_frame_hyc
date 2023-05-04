@@ -16,6 +16,13 @@ class StorageOfHYC {
     return GetStorage();
   }
 
+  /// 创建一个带有过期时间的缓存
+  GetStorage createCacheWithExpire({expectTime}){
+
+
+    return GetStorage();
+  }
+
   /// 删除一个缓存
   void deleteCache(){
 

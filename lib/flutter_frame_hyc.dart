@@ -1,3 +1,5 @@
+library flutter_frame_hyc;
+
 import 'package:flutter_frame_hyc/src/log/log.dart';
 
 /// 这里应该是先暴露一些文件
