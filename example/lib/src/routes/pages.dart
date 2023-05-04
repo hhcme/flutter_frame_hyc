@@ -4,6 +4,6 @@ part 'routes.dart';
 class AppPages {
   static final routes = [
     /// 发一波首页
-    GetPage(name: _Paths.appHome, page: () => const WaveHomeView(), binding: WaveHomeBinding()),
+    // GetPage(name: _Paths.appHome, page: () => const WaveHomeView(), binding: WaveHomeBinding()),
   ];
 }
