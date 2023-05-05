@@ -1,0 +1,3 @@
+class AppHomeState {
+  AppHomeState();
+}

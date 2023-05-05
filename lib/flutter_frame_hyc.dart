@@ -8,6 +8,11 @@ export 'src/file/file.dart';
 export 'src/storage/storage.dart';
 export 'src/route/route.dart';
 
+export 'package:get/get_navigation/get_navigation.dart';
+export 'package:get/get_state_manager/get_state_manager.dart';
+export 'package:get/get_instance//get_instance.dart';
+export 'package:get/get_core/get_core.dart';
+
 ///
 /// todo 目前还是不提供自定义启动模块, 初始化就是全功能实现
 /// 在APP里面需要先初始化大的类, 初始化就是根据一些参数的结果来决定一些模块是否需要加载

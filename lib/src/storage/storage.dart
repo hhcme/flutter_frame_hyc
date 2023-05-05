@@ -1,5 +1,7 @@
 import 'package:get_storage/get_storage.dart';
 
+// todo 这里的缓存没有过期时间的功能, 后面有需要再改进吧
+
 /// 缓存中心的帮助方法
 class StorageOfHYC {
   /// 这里是保存所有的缓存实例的地方
@@ -17,14 +19,15 @@ class StorageOfHYC {
     return getStorage;
   }
 
-  /// 创建一个缓存
-  /// [name] 缓存实例的名字
-  /// [duration] 缓存的过期时间
-  static GetStorage createCacheWithExpire(String name, {Duration? duration}) {
-    final GetStorage getStorage = GetStorage();
-    _allStorage[name] = getStorage;
-    return getStorage;
-  }
+  // /// 创建一个缓存
+  // /// [name] 缓存实例的名字
+  // /// [duration] 缓存的过期时间
+  // static GetStorage createCacheWithExpire(String name, Duration duration) {
+  //   final GetStorage getStorage = GetStorage();
+  //   _allStorage[name] = getStorage;
+  //   _storageExpire[name]=duration;
+  //   return getStorage;
+  // }
 
   /// 寻找一个缓存
   static Future<GetStorage?> findCache(String name) async {
