@@ -4,7 +4,7 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 import 'logic.dart';
 
 class AppHomeView extends GetView<AppHomeLogic> {
-  const AppHomeView({BuildContext? context, Key? key}) : super(key: key, context: context);
+  const AppHomeView({BuildContext? context, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

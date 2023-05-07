@@ -10,7 +10,7 @@ export 'src/route/route.dart';
 
 export 'package:get/get_navigation/get_navigation.dart';
 export 'package:get/get_state_manager/get_state_manager.dart';
-export 'package:get/get_instance//get_instance.dart';
+export 'package:get/get_instance/get_instance.dart';
 export 'package:get/get_core/get_core.dart';
 
 ///

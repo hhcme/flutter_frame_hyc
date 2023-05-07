@@ -12,4 +12,7 @@ abstract class _Paths {
   // 首页
   static const appHome = '/app_home';
 
+  // 存储测试
+  static const storageHome = '/storage_home';
+
 }
