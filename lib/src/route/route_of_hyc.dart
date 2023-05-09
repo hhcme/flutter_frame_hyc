@@ -8,9 +8,10 @@ import 'package:flutter_frame_hyc/src/route/navigator_observer.dart';
 /// 需要有一个可以永久存在的实例用来存储路由信息
 
 /// 使用路由的入口
-class RoutesOfHYC {
+abstract class RoutesOfHYC {
 
-  final Map<String, Route> history = {};
+  /// 暂存路由对象, 用来保管 context
+  static Map<String, BuildContext> history = {};
 
   /// 定时器
   /// 如果这个定时器存在的话, 说明当前路由操作需要丢弃掉
@@ -27,11 +28,14 @@ class RoutesOfHYC {
 
   /// 跳转命名路由
   static Future<T?>? toNamed<T>(String name, {T? data}) async {
-    if (canPush()) {
-      return null;
-    }
+    routeLog.logDebug('暂未实现');
+    // if (canPush()) {
+    //   return null;
+    // }
     _runTimer();
-    return await Navigator.pushNamed(context, name, arguments: data);
+    // history.addAll({name: GlobalKey().currentContext!});
+     return await Navigator.pushNamed(
+        history.entries.last.value, name, arguments: data);
   }
 
   /// 跳转弹窗
@@ -40,7 +44,8 @@ class RoutesOfHYC {
       return null;
     }
     _runTimer();
-    return await Get.dialog(widget,arguments: data);
+    routeLog.logDebug('暂未实现');
+    // return await Dialog(widget, arguments: data);
   }
 
   /// 关闭当前路由
@@ -49,12 +54,15 @@ class RoutesOfHYC {
     // if (canPush()) {
     //   return;
     // }
-    Navigator.replaceRouteBelow(, anchorRoute: anchorRoute, newRoute: newRoute)
+    Navigator.pop(history.entries.last.value, data);
+    history.remove(history.entries.last.key);
   }
+
   /// 一直退出路由, 直到被打断
   static void until<T>(RoutePredicate predicate) {
     // todo 这里需要做一个默认值就是退到最后一层的 / 路由
-    Get.until(predicate);
+    // Get.until(predicate);
+    routeLog.logDebug('暂未实现');
   }
 
   // /// todo 这个东西可以考虑放到ui库里面

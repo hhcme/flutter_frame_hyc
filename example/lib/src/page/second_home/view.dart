@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
-import 'logic.dart';
 
-class AppHomeView extends HycFrameView<AppHomeLogic> {
-  const AppHomeView({BuildContext? context, Key? key}) : super(key: key, context: context);
+class SecondHomeView extends StatelessWidget {
+  const SecondHomeView({BuildContext? context, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +11,8 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
       body: Center(
         child: ListView(
           children: <Widget>[
-            controlButton('去第一个页面', () {
-              RoutesOfHYC.toNamed('/first_home');
+            controlButton('返回上一级', () {
+              RoutesOfHYC.back();
             }),
           ],
         ),
@@ -25,7 +24,7 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
   Widget controlButton(String title, void Function() func) {
     return SizedBox(
       height: 50,
-      child: TextButton(child: Text(title), onPressed: () => func()),
+      child: TextButton(child: Text(title), onPressed: () => func),
     );
   }
 }

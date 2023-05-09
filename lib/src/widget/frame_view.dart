@@ -8,7 +8,7 @@ abstract class HycFrameView<T> extends StatelessWidget {
 
   final BuildContext? context;
 
-  T get logic => Object<T>();
+  // T get logic => Object<T>();
 
   @override
   Widget build(BuildContext context);

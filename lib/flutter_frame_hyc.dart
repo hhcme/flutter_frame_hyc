@@ -9,6 +9,7 @@ export 'src/file/file.dart';
 export 'src/log/log.dart';
 export 'src/route/route.dart';
 export 'src/storage/storage.dart';
+export 'src/widget/widget.dart';
 
 ///
 /// todo 目前还是不提供自定义启动模块, 初始化就是全功能实现
@@ -19,5 +20,7 @@ class FrameOfHYC {
   /// 初始化
   static Future<void> init(BuildContext context) async {
     RouteConfigOfHYC();
+
+    RoutesOfHYC.history.addAll({'/':context});
   }
 }

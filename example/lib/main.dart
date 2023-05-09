@@ -1,4 +1,5 @@
 import 'package:example/src/routes/pages.dart';
+import 'package:example/src/routes/routes_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        routes: AppPages.routes,
-        initialRoute: '/app_home',
+        routes: TestRouterConfig.routes,
+        initialRoute: '/',
         navigatorObservers: [HycNavigatorObserver()], // 增加路由监听
       );
     });
