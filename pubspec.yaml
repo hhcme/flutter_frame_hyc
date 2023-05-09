@@ -1,7 +1,6 @@
 name: flutter_frame_hyc
 description: 自己封装的flutter基础框架底层包
-version: 0.0.1
-homepage:
+version: 1.0.0
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
@@ -10,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.6.5
   get_storage: 2.1.1
   path_provider: 2.0.14
   permission_handler: 10.2.0

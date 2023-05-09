@@ -4,7 +4,7 @@
 自己封装的flutter基础框架底层包, 这个包只提供方法, 不提供ui
 
 ## 提供功能
-1. 可以提供一套自己路由封装(依赖flutter原生)(目前还是使用get)
+1. 可以提供一套自己路由封装(依赖flutter原生)
 2. 缓存封装(依赖get_storage)
 3. 网络请求封装(依赖flutter原生)
 4. 权限封装 (依赖permission_handler)

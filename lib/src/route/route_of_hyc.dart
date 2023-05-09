@@ -3,14 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/src/route/log.dart';
 import 'package:flutter_frame_hyc/src/route/navigator_observer.dart';
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-/// todo 这里的路由还是使用getx来实现先吧
-/// 路由动画就需要等等了
-/// todo 弹窗和路由的动画和一些基本参数应该要放出来,但是会有一个默认的路由配置文件去控制
+/// 需要有一个可以永久存在的实例用来存储路由信息
 
 /// 使用路由的入口
 class RoutesOfHYC {
+
+  final Map<String, Route> history = {};
+
   /// 定时器
   /// 如果这个定时器存在的话, 说明当前路由操作需要丢弃掉
   static Timer? _timer;
@@ -30,7 +31,7 @@ class RoutesOfHYC {
       return null;
     }
     _runTimer();
-    return await Get.toNamed(name,arguments: data);
+    return await Navigator.pushNamed(context, name, arguments: data);
   }
 
   /// 跳转弹窗
@@ -48,7 +49,7 @@ class RoutesOfHYC {
     // if (canPush()) {
     //   return;
     // }
-     Get.back(result: data);
+    Navigator.replaceRouteBelow(, anchorRoute: anchorRoute, newRoute: newRoute)
   }
   /// 一直退出路由, 直到被打断
   static void until<T>(RoutePredicate predicate) {
