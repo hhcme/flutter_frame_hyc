@@ -3,9 +3,18 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 import 'logic.dart';
 
-class AppHomeView extends HycFrameView<AppHomeLogic> {
-  const AppHomeView({BuildContext? context, Key? key}) : super(key: key, context: context);
+class AppHomeView extends HycFrameView {
+  const AppHomeView({BuildContext? context, Key? key})
+      : super(key: key, context: context);
 
+  @override
+  State<StatefulWidget> createState() => _AppHomeViewState();
+
+  @override
+  AppHomeLogic get logic => AppHomeLogic();
+}
+
+class _AppHomeViewState extends State<AppHomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +22,7 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
         child: ListView(
           children: <Widget>[
             controlButton('去第一个页面', () {
-              RoutesOfHYC.toNamed('/first_home');
+              widget.toName('/first_home');
             }),
           ],
         ),

@@ -3,7 +3,7 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 import 'state.dart';
 
 class AppHomeLogic {
-  AppHomeLogic({required this.state});
+  AppHomeLogic();
 
-  final AppHomeState state;
+   AppHomeState state =AppHomeState();
 }
