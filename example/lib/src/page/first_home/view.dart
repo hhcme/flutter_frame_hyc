@@ -3,11 +3,12 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 
 class FirstHomeView extends StatelessWidget {
-  const FirstHomeView({BuildContext? context, Key? key}) : super(key: key);
+  const FirstHomeView({required BuildContext context, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('第一个页面'),),
       body: Center(
         child: ListView(
           children: <Widget>[

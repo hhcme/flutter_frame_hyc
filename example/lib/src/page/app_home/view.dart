@@ -4,7 +4,7 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 import 'logic.dart';
 
 class AppHomeView extends HycFrameView {
-  const AppHomeView({BuildContext? context, Key? key})
+  const AppHomeView({required BuildContext context, Key? key})
       : super(key: key, context: context);
 
   @override
@@ -22,7 +22,22 @@ class _AppHomeViewState extends State<AppHomeView> {
         child: ListView(
           children: <Widget>[
             controlButton('去第一个页面', () {
-              widget.toName('/first_home');
+              widget.toNamed('/first_home');
+            }),
+            Container(
+              height: 40,
+              child: Text(widget.logic.state.index.toString()),
+            ),
+            controlButton('开启一个定时器', () {
+              widget.logic.start();
+            }),
+            TextButton(
+                onPressed: () {
+                  SnackBar(content: Text(widget.logic.state.index.toString()));
+                },
+                child: const Text('刷新')),
+            controlButton('结束定时器', () {
+              widget.logic.end();
             }),
           ],
         ),
