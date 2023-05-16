@@ -10,8 +10,6 @@ abstract class HycFrameView<T> extends StatefulWidget {
 
   final BuildContext context;
 
-  T get logic;
-
   Future<dynamic> toNamed(String name, {T? data}) async {
     return await Navigator.pushNamed(context, name, arguments: data);
   }
@@ -25,11 +23,14 @@ abstract class HycFrameView<T> extends StatefulWidget {
   }
 }
 
-abstract class HycFrameLogic {
-    // const HycFrameLogic({required RefreshFunc refreshFunc});
+abstract class HycFrameLogic<T> {
+
   void refresh();
 
-  void init();
-
-  void dispose();
+  T get logic;
 }
+
+// extension HycFrameLogic<T> on State{
+//
+//   T get logic=> T;
+// }

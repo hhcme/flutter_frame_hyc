@@ -4,7 +4,7 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 import 'state.dart';
 
-class AppHomeLogic extends HycFrameLogic{
+class AppHomeLogic{
   AppHomeLogic();
 
   AppHomeState state = AppHomeState();
@@ -27,19 +27,5 @@ class AppHomeLogic extends HycFrameLogic{
   void end(){
     _timer?.cancel();
     _timer=null;
-  }
-
-  @override
-  void dispose() {
-
-  }
-
-  @override
-  void init() {
-  }
-
-  @override
-  void refresh() {
-
   }
 }
