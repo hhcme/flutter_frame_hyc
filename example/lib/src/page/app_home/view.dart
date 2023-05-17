@@ -3,16 +3,10 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 import 'logic.dart';
 
-class AppHomeView extends HycFrameView {
-  const AppHomeView({required BuildContext context, Key? key})
-      : super(key: key, context: context);
+class AppHomeView extends HycFrameView<AppHomeLogic> {
+  AppHomeView({required BuildContext context, Key? key})
+      : super(key: key, context: context, dependency: () => AppHomeLogic());
 
-  @override
-  State<StatefulWidget> createState() => _AppHomeViewState();
-
-}
-
-class _AppHomeViewState extends State<AppHomeView> implements HycFrameLogic {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,19 +14,18 @@ class _AppHomeViewState extends State<AppHomeView> implements HycFrameLogic {
         child: ListView(
           children: <Widget>[
             controlButton('去第一个页面', () {
-              widget.toNamed('/first_home');
+              toNamed('/first_home');
             }),
             SizedBox(
               height: 40,
-              child: Text(logic.state.index.toString()),
+              child: Text('${logic.state.index}'),
             ),
             controlButton('开启一个定时器', () {
               logic.start();
             }),
             TextButton(
                 onPressed: () {
-                  refresh();
-                  SnackBar(content: Text(logic.state.index.toString()));
+                  print('index -> ${logic.state.index}');
                 },
                 child: const Text('刷新')),
             controlButton('结束定时器', () {
@@ -50,15 +43,5 @@ class _AppHomeViewState extends State<AppHomeView> implements HycFrameLogic {
       height: 50,
       child: TextButton(child: Text(title), onPressed: () => func()),
     );
-  }
-
-  @override
-  AppHomeLogic get logic => AppHomeLogic();
-
-  @override
-  void refresh() {
-    setState(() {
-
-    });
   }
 }

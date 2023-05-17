@@ -1,31 +1,33 @@
 import 'dart:async';
 
-import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
-
 import 'state.dart';
 
-class AppHomeLogic{
-  AppHomeLogic();
+class AppHomeLogic {
+   AppHomeLogic();
 
   AppHomeState state = AppHomeState();
 
   Timer? _timer;
 
-
   /// 开启一个定时器
-  void start(){
+  void start() {
+    if (_timer != null) {
+      return;
+    }
+    _runTimer();
+  }
+
+  void _runTimer(){
     _timer = Timer(const Duration(seconds: 1), () {
-      end();
       state.index++;
       print('${state.index}');
-      start();
+      _runTimer();
     });
-
   }
 
   /// 销毁定时器
-  void end(){
+  void end() {
     _timer?.cancel();
-    _timer=null;
+    _timer = null;
   }
 }

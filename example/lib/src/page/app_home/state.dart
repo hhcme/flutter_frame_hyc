@@ -1,5 +1,5 @@
 class AppHomeState {
   AppHomeState();
 
-  int index=0;
+  int index = 0;
 }

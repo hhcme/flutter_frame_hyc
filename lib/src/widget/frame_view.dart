@@ -1,16 +1,34 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-typedef RefreshFunc = void Function();
+typedef FrameLogic<S> = S Function();
+
+abstract class LogicMiddle<S> {
+  static Map<String, dynamic> logicList = {};
+}
 
 /// page 框架
-abstract class HycFrameView<T> extends StatefulWidget {
-  const HycFrameView({Key? key, required this.context}) : super(key: key);
+abstract class HycFrameView<S> extends StatefulWidget {
+  HycFrameView({Key? key, required this.context, required this.dependency})
+      : super(key: key) {
+    LogicMiddle.logicList.addAll({S.toString(): dependency()});
+  }
 
   final String? tag = null;
 
   final BuildContext context;
 
-  Future<dynamic> toNamed(String name, {T? data}) async {
+  final FrameLogic<S> dependency;
+
+  S get logic => LogicMiddle.logicList[S.toString()] as S;
+
+  Widget build(BuildContext context);
+
+  @override
+  State<HycFrameView> createState() => _HycFrameViewState();
+
+  Future<dynamic> toNamed(String name, {dynamic data}) async {
     return await Navigator.pushNamed(context, name, arguments: data);
   }
 
@@ -23,14 +41,33 @@ abstract class HycFrameView<T> extends StatefulWidget {
   }
 }
 
-abstract class HycFrameLogic<T> {
+class _HycFrameViewState extends State<HycFrameView> {
+  _HycFrameViewState();
 
-  void refresh();
+  @override
+  Widget build(BuildContext context) {
+    return widget.build(context);
+  }
 
-  T get logic;
+  @override
+  void initState() {
+    super.initState();
+    _runTimer();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    _timer = null;
+    super.dispose();
+  }
+
+  Timer? _timer;
+
+  void _runTimer() {
+    _timer = Timer(const Duration(milliseconds: 100), () {
+      setState(() {});
+      _runTimer();
+    });
+  }
 }
-
-// extension HycFrameLogic<T> on State{
-//
-//   T get logic=> T;
-// }
