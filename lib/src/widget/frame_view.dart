@@ -6,36 +6,63 @@ typedef FrameLogic<S> = S Function();
 
 abstract class LogicMiddle<S> {
   static Map<String, dynamic> logicList = {};
+
+  /// 寻找logic, 找不到会报错
+  static S find<S>(String? tag) {
+    if (!logicList.containsKey('${S}_tag$tag?')) {
+      throw Exception();
+    }
+
+    return logicList['${S}_tag$tag?'];
+  }
+
+  /// 尝试找一个logic, 找不到会返回空
+  static S? tryFind<S>(String? tag) {
+    return logicList['${S}_tag$tag?'];
+  }
+
+  /// 尝试找一个logic, 找不到会返回空
+  static void put<S>(FrameLogic<S> dependency, {String? tag}) {
+    logicList.addAll({'${S}_tag$tag?': dependency()});
+  }
 }
 
 /// page 框架
 abstract class HycFrameView<S> extends StatefulWidget {
-  HycFrameView({Key? key, required this.context, required this.dependency})
+  HycFrameView(
+      {Key? key, required this.context, required this.dependency, this.tag})
       : super(key: key) {
-    LogicMiddle.logicList.addAll({S.toString(): dependency()});
+    LogicMiddle.put(dependency);
   }
 
-  final String? tag = null;
+  /// tag唯一标签
+  final String? tag;
 
   final BuildContext context;
 
+  /// 绑定的logic
   final FrameLogic<S> dependency;
 
-  S get logic => LogicMiddle.logicList[S.toString()] as S;
+  /// 获取logic的方法
+  S get logic => LogicMiddle.find<S>(tag);
 
+  /// 页面
   Widget build(BuildContext context);
 
   @override
   State<HycFrameView> createState() => _HycFrameViewState();
 
+  /// 跳转新页面, 命名路由
   Future<dynamic> toNamed(String name, {dynamic data}) async {
     return await Navigator.pushNamed(context, name, arguments: data);
   }
 
+  /// 退出当前路由
   void back({dynamic data}) {
     Navigator.pop(context, data);
   }
 
+  /// 弹出一个弹窗
   Future<dynamic> toDialog(WidgetBuilder child) async {
     return await showDialog(context: context, builder: child);
   }
@@ -62,10 +89,12 @@ class _HycFrameViewState extends State<HycFrameView> {
     super.dispose();
   }
 
+  /// 刷新定时器
   Timer? _timer;
 
+  /// 每隔50ms就刷新一下页面
   void _runTimer() {
-    _timer = Timer(const Duration(milliseconds: 100), () {
+    _timer = Timer(const Duration(milliseconds: 50), () {
       setState(() {});
       _runTimer();
     });
