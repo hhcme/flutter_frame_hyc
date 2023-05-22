@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_frame_hyc/src/route/route.dart';
 
 typedef FrameLogic<S> = S Function();
 
@@ -52,26 +53,26 @@ abstract class HycFrameView<S> extends StatefulWidget {
 
   /// 跳转新页面, 命名路由
   Future<dynamic> toNamed(String name, {dynamic data}) async {
-    return await Navigator.pushNamed(context, name, arguments: data);
+    return await RoutesOfHYC.toNamed(context, name, data: data);
   }
 
   /// 退出当前路由
   void back({dynamic data}) {
-    Navigator.pop(context, data);
+    RoutesOfHYC.back(context,data: data);
   }
 
   /// 弹出一个弹窗
   Future<dynamic> toDialog(Widget child) async {
     return await showDialog(context: context, builder: (context){
-      return Stack(
-        fit: StackFit.expand,
+      return Scaffold(body: Stack(
+        fit: StackFit.loose,
         children: [Container(
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
           child: child,)],
-      );
+      ),);
     });
   }
 }

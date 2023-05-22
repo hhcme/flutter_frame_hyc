@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
-class SecondHomeView extends StatelessWidget {
-  const SecondHomeView({required BuildContext context, Key? key}) : super(key: key);
+import 'logic.dart';
+
+class SecondHomeView extends HycFrameView<SecondHomeLogic> {
+  SecondHomeView({required BuildContext context, Key? key}) : super(key: key, context: context, dependency: () => SecondHomeLogic());
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class SecondHomeView extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             controlButton('返回上一级', () {
-              RoutesOfHYC.back();
+              back();
             }),
           ],
         ),
@@ -26,7 +28,7 @@ class SecondHomeView extends StatelessWidget {
   Widget controlButton(String title, void Function() func) {
     return SizedBox(
       height: 50,
-      child: TextButton(child: Text(title), onPressed: () => func),
+      child: TextButton(child: Text(title), onPressed: () => func()),
     );
   }
 }

@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/src/route/log.dart';
-import 'package:flutter_frame_hyc/src/route/navigator_observer.dart';
 // import 'package:get/get.dart';
 
 /// 需要有一个可以永久存在的实例用来存储路由信息
@@ -17,42 +16,53 @@ abstract class RoutesOfHYC {
   static Timer? _timer;
 
   /// 判断能否跳转路由
-  static bool canPush() {
-    if (_timer != null) {
-      routeLog.logInfo('处在路由保护中,本次路由操作丢弃');
-      return false;
-    }
-    return true;
+  static bool isProtect() {
+    // if (_timer != null) {
+    //   routeLog.logInfo('处在路由保护中,本次路由操作丢弃');
+    //   return true;
+    // }
+    return false;
   }
 
   /// 跳转命名路由
-  static Future<T?>? toNamed<T>(String name, {T? data}) async {
-    routeLog.logDebug('暂未实现');
-    // if (canPush()) {
-    //   return null;
-    // }
-    _runTimer();
-    // history.addAll({name: GlobalKey().currentContext!});
-    return await Navigator.pushNamed(history.entries.last.value, name, arguments: data);
-  }
-
-  /// 跳转弹窗
-  static Future<T?>? toDialog<T>(Widget widget, {T? data}) async {
-    if (canPush()) {
+  static Future<T?>? toNamed<T>(BuildContext context, String name, {T? data}) async {
+    if (isProtect()) {
       return null;
     }
     _runTimer();
-    routeLog.logDebug('暂未实现');
-    // return await Dialog(widget, arguments: data);
+    history.addAll({name: context});
+    return await Navigator.pushNamed(context, name, arguments: data);
+  }
+
+  /// 跳转弹窗
+  static Future<T?>? toDialog<T>(BuildContext context, Widget child, {T? data}) async {
+    if (isProtect()) {
+      return null;
+    }
+    _runTimer();
+    return await showDialog(
+        context: context,
+        builder: (context) {
+          return Scaffold(
+            body: Stack(
+              fit: StackFit.expand,
+              children: [
+                Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: child)
+              ],
+            ),
+          );
+        });
   }
 
   /// 关闭当前路由
-  static void back<T>({T? data}) {
+  static void back<T>(BuildContext context, {T? data}) {
     // todo 这里还不知道要不要加路由时间保护
-    // if (canPush()) {
-    //   return;
-    // }
-    Navigator.pop(history.entries.last.value, data);
+    Navigator.pop(context, data);
     history.remove(history.entries.last.key);
   }
 
