@@ -9,7 +9,6 @@ import 'package:flutter_frame_hyc/src/route/navigator_observer.dart';
 
 /// 使用路由的入口
 abstract class RoutesOfHYC {
-
   /// 暂存路由对象, 用来保管 context
   static Map<String, BuildContext> history = {};
 
@@ -34,8 +33,7 @@ abstract class RoutesOfHYC {
     // }
     _runTimer();
     // history.addAll({name: GlobalKey().currentContext!});
-     return await Navigator.pushNamed(
-        history.entries.last.value, name, arguments: data);
+    return await Navigator.pushNamed(history.entries.last.value, name, arguments: data);
   }
 
   /// 跳转弹窗

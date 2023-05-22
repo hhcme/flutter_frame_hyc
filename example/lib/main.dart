@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 void main() async {
-
   runApp(const MyApp());
 }
 
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FrameOfHYC.init(context);
-    return Builder(builder: (BuildContext context){
+    return Builder(builder: (BuildContext context) {
       return MaterialApp(
         title: 'frame 测试',
         // todo 这里的主题色还没有定好怎么做

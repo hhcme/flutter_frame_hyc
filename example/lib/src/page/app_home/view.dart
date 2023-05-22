@@ -4,8 +4,7 @@ import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 import 'logic.dart';
 
 class AppHomeView extends HycFrameView<AppHomeLogic> {
-  AppHomeView({required BuildContext context, Key? key})
-      : super(key: key, context: context, dependency: () => AppHomeLogic());
+  AppHomeView({required BuildContext context, Key? key}) : super(key: key, context: context, dependency: () => AppHomeLogic());
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +29,9 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
                 child: const Text('刷新')),
             controlButton('结束定时器', () {
               logic.end();
+            }),
+            controlButton('弹窗', () {
+              toDialog(Container(width: 30,height: 30,child: const Text('123123123123'),));
             }),
           ],
         ),

@@ -29,9 +29,7 @@ abstract class LogicMiddle<S> {
 
 /// page 框架
 abstract class HycFrameView<S> extends StatefulWidget {
-  HycFrameView(
-      {Key? key, required this.context, required this.dependency, this.tag})
-      : super(key: key) {
+  HycFrameView({Key? key, required this.context, required this.dependency, this.tag}) : super(key: key) {
     LogicMiddle.put(dependency);
   }
 
@@ -63,8 +61,18 @@ abstract class HycFrameView<S> extends StatefulWidget {
   }
 
   /// 弹出一个弹窗
-  Future<dynamic> toDialog(WidgetBuilder child) async {
-    return await showDialog(context: context, builder: child);
+  Future<dynamic> toDialog(Widget child) async {
+    return await showDialog(context: context, builder: (context){
+      return Stack(
+        fit: StackFit.expand,
+        children: [Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: child,)],
+      );
+    });
   }
 }
 

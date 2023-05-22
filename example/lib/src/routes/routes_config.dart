@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 abstract class TestRouterConfig {
   // 此处用于后续通用路由配置
   static Map<String, WidgetBuilder> routes = {
-    '/': (context) => AppHomeView(context: context,),
-    '/first_home': (context) =>  FirstHomeView(context: context),
-    '/second_home': (context) =>  SecondHomeView(context: context),
+    '/': (context) => AppHomeView(
+          context: context,
+        ),
+    '/first_home': (context) => FirstHomeView(context: context),
+    '/second_home': (context) => SecondHomeView(context: context),
   };
 
   // 配置到MaterialApp的onGenerateRoute中

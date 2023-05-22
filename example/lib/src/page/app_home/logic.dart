@@ -3,7 +3,7 @@ import 'dart:async';
 import 'state.dart';
 
 class AppHomeLogic {
-   AppHomeLogic();
+  AppHomeLogic();
 
   AppHomeState state = AppHomeState();
 
@@ -17,7 +17,7 @@ class AppHomeLogic {
     _runTimer();
   }
 
-  void _runTimer(){
+  void _runTimer() {
     _timer = Timer(const Duration(seconds: 1), () {
       state.index++;
       print('${state.index}');

@@ -4,7 +4,6 @@ part of 'pages.dart';
 abstract class Routes {
   // 首页
   static const APP_HOME = _Paths.appHome;
-
 }
 
 // 绑定页面用的路由名称
@@ -14,5 +13,4 @@ abstract class _Paths {
 
   // 存储测试
   static const storageHome = '/storage_home';
-
 }

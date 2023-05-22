@@ -21,6 +21,6 @@ class FrameOfHYC {
   static Future<void> init(BuildContext context) async {
     RouteConfigOfHYC();
 
-    RoutesOfHYC.history.addAll({'/':context});
+    RoutesOfHYC.history.addAll({'/': context});
   }
 }

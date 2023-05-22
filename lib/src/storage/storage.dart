@@ -38,7 +38,7 @@ class StorageOfHYC {
   /// 这里的返回值是布尔值, true 为删除成功 , false 为删除失败
   static Future<bool> deleteCache(String name) async {
     final result = await findCache(name);
-    if(result==null){
+    if (result == null) {
       return false;
     }
     result.remove(name);
@@ -48,7 +48,7 @@ class StorageOfHYC {
 
   /// 删除所有缓存
   static Future<void> clearAll() async {
-    for(var key in _allStorage.keys){
+    for (var key in _allStorage.keys) {
       /// 这个方法可以清除所有的字段
       _allStorage[key]!.erase();
     }
