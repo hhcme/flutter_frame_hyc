@@ -58,22 +58,29 @@ abstract class HycFrameView<S> extends StatefulWidget {
 
   /// 退出当前路由
   void back({dynamic data}) {
-    RoutesOfHYC.back(context,data: data);
+    RoutesOfHYC.back(context, data: data);
   }
 
   /// 弹出一个弹窗
   Future<dynamic> toDialog(Widget child) async {
-    return await showDialog(context: context, builder: (context){
-      return Scaffold(body: Stack(
-        fit: StackFit.loose,
-        children: [Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: child,)],
-      ),);
-    });
+    return await showDialog(
+        context: context,
+        builder: (context) {
+          return Scaffold(
+            body: Stack(
+              fit: StackFit.loose,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: child,
+                )
+              ],
+            ),
+          );
+        });
   }
 }
 
