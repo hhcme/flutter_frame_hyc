@@ -5,6 +5,8 @@ import 'package:flutter_frame_hyc/src/route/route.dart';
 
 typedef FrameLogic<S> = S Function();
 
+/// 存储 logic
+/// todo 这个方法需要放到别的地方
 abstract class LogicMiddle<S> {
   static Map<String, dynamic> logicList = {};
 
