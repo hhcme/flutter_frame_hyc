@@ -10,12 +10,26 @@ class SecondHomeView extends HycFrameView<SecondHomeLogic> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('第二个页面'),
+        title: const Text('第二封信'),
       ),
       body: Center(
-        child: ListView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            controlButton('返回上一级', () {
+            const Text(
+              '想得美哈哈哈哈',
+              style: TextStyle(fontSize: 25),
+            ),
+            const Text(
+              '一次只有一封信,',
+              style: TextStyle(fontSize: 25),
+            ),
+            const Text(
+              '下次再来看吧',
+              style: TextStyle(fontSize: 25),
+            ),
+            controlButton('回去看第一封信', () {
               back();
             }),
           ],
