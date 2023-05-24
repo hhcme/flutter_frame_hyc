@@ -10,6 +10,7 @@ abstract class Toast {
   /// 小提示定时到期后消失定时器
   static Timer? _timer;
 
+  // todo 这个方法现在还有bug, 点击后弹出弹窗就会出现bug
   static void showBubble(BuildContext context, String txt) {
     if (_overlayEntry != null) {
       _overlayEntry?.remove();
@@ -18,7 +19,7 @@ abstract class Toast {
       _timer = null;
     }
     _overlayEntry = OverlayEntry(builder: (context) {
-      return OverlayWidget(txt);
+      return OverlayWidget(context, txt);
     });
     var overlayState = Overlay.of(context);
     overlayState.insert(_overlayEntry!);
@@ -33,6 +34,7 @@ abstract class Toast {
 
 class OverlayWidget extends StatefulWidget {
   const OverlayWidget(
+      BuildContext context,
     this.txt, {
     super.key,
   });
