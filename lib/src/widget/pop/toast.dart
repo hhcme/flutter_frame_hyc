@@ -37,6 +37,7 @@ class OverlayWidget extends StatefulWidget {
     super.key,
   });
 
+  /// 文本信息
   final String txt;
 
   @override

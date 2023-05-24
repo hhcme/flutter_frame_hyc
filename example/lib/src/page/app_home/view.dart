@@ -12,6 +12,9 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
       body: Center(
         child: ListView(
           children: <Widget>[
+            SizedBox(
+              height: screenUtil.adaptive(100),
+            ),
             controlButton('查看第一封信', () {
               toNamed('/first_home');
             }),

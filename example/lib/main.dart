@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // todo 这里可能还是有问题, 因为是需要context的, 但是加载可能会有大量异步
     FrameOfHYC.init(context);
     return Builder(builder: (BuildContext context) {
       return MaterialApp(
@@ -21,7 +22,13 @@ class MyApp extends StatelessWidget {
         ),
         routes: TestRouterConfig.routes,
         initialRoute: '/',
-        navigatorObservers: [HycNavigatorObserver()], // 增加路由监听
+        navigatorObservers: [HycNavigatorObserver()],
+        // 增加路由监听
+        builder: (BuildContext context, Widget? child) {
+          return ScreenWidget(
+            child: child,
+          );
+        },
       );
     });
   }
