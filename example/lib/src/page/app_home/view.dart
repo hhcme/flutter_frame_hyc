@@ -31,7 +31,14 @@ class AppHomeView extends HycFrameView<AppHomeLogic> {
               logic.end();
             }),
             controlButton('弹窗', () {
-              toDialog(Container(width: 30,height: 30,child: const Text('123123123123'),));
+              toDialog(Container(
+                width: 30,
+                height: 30,
+                child: const Text('123123123123'),
+              ));
+            }),
+            controlButton('点我干啥子', () {
+              showToast('123123123123');
             }),
           ],
         ),

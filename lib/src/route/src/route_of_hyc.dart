@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_frame_hyc/src/route/log.dart';
+import 'package:flutter_frame_hyc/src/route/src/log.dart';
+import 'package:flutter_frame_hyc/src/widget/widget.dart';
+import 'package:flutter_frame_hyc/src/route/widget/ordinary_dialog.dart';
 // import 'package:get/get.dart';
 
 /// 需要有一个可以永久存在的实例用来存储路由信息
@@ -34,31 +36,6 @@ abstract class RoutesOfHYC {
     return await Navigator.pushNamed(context, name, arguments: data);
   }
 
-  /// 跳转弹窗
-  static Future<T?>? toDialog<T>(BuildContext context, Widget child, {T? data}) async {
-    if (isProtect()) {
-      return null;
-    }
-    _runTimer();
-    return await showDialog(
-        context: context,
-        builder: (context) {
-          return Scaffold(
-            body: Stack(
-              fit: StackFit.expand,
-              children: [
-                Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: child)
-              ],
-            ),
-          );
-        });
-  }
-
   /// 关闭当前路由
   static void back<T>(BuildContext context, {T? data}) {
     // todo 这里还不知道要不要加路由时间保护
@@ -73,20 +50,28 @@ abstract class RoutesOfHYC {
     routeLog.logDebug('暂未实现');
   }
 
+  /// 跳转弹窗
+  static Future<T?>? toDialog<T>(BuildContext context, Widget child, {T? data, Color? backgroundColor}) async {
+    if (isProtect()) {
+      return null;
+    }
+    _runTimer();
+    history.addAll({'dialog': context});
+    return await showDialog(
+        context: context, barrierColor: backgroundColor ?? const Color(0x25000000), builder: (context) => OrdinaryDialog(context, child: child));
+  }
+
   // /// todo 这个东西可以考虑放到ui库里面
   // /// 全屏的转圈加载的动画
   // void showLoading()  {
   //
   // }
-  // /// 底部弹出的小黑窗
-  // void showToast()  {
-  //
-  // }
+
 
   /// 开启路由保护状态定时器
   static void _runTimer() {
     if (_timer != null) {
-      routeLog.logInfo('当前已经处在路由保护中');
+      routeLog.logInfo('当前处在路由保护中');
       return;
     }
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_frame_hyc/src/route/route.dart';
+import 'package:flutter_frame_hyc/flutter_frame_hyc.dart';
 
 typedef FrameLogic<S> = S Function();
 
@@ -65,25 +65,14 @@ abstract class HycFrameView<S> extends StatefulWidget {
 
   /// 弹出一个弹窗
   Future<dynamic> toDialog(Widget child) async {
-    return await showDialog(
-        context: context,
-        builder: (context) {
-          return Scaffold(
-            body: Stack(
-              fit: StackFit.loose,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: child,
-                )
-              ],
-            ),
-          );
-        });
+    return await RoutesOfHYC.toDialog(context, child);
   }
+
+  /// 底部弹出的小黑窗
+  void showToast(String txt) {
+    Toast.showBubble(context, txt);
+  }
+
 }
 
 class _HycFrameViewState extends State<HycFrameView> {
