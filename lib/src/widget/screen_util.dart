@@ -65,8 +65,9 @@ class _ScreenWidgetState extends State<ScreenWidget> with WidgetsBindingObserver
 /// [_textScaleFactor] 字体的缩放比例
 class ScreenUtil {
   static ScreenUtil _instance = ScreenUtil._();
-  static int width = 1000; //设计稿宽度
-  static int height = 2111; //设计稿高度
+  /// 这里是iphone14的屏幕分辨率
+  static int width = 1170; //设计稿宽度
+  static int height = 2532; //设计稿高度
   static double? _deviceWidth; //实际设备宽度
   static double? _deviceHeight; //实际设备高度
   static double? _textScaleFactor; //字体的缩放比例
